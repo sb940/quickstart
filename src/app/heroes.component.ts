@@ -14,6 +14,7 @@ import { HeroService } from './hero.service';
         [class.selected]="hero === selectedHero"
         (click)="onSelect(hero)">
         <span class="badge">{{hero.id}}</span> {{hero.name}}
+        <a href="{{hero.link}}" target="_blank">test</a>
       </li>
     </ul>
     <hero-detail [hero]="selectedHero"></hero-detail>
@@ -67,6 +68,7 @@ import { HeroService } from './hero.service';
       border-radius: 4px 0 0 4px;
     }
   `]
+  ,
   providers: [HeroService]
 })
 export class HeroesComponent implements OnInit {
