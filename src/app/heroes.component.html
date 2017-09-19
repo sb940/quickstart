@@ -3,9 +3,7 @@
   <li *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero"
     (click)="onSelect(hero)">
-    <a href=" {{hero.link}}" target="_blank">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
+    <a href="{{hero.link}}" target="_blank"><span class="badge">{{hero.id}}</span> {{hero.name}}</a>
   </li>
 </ul>
 <div *ngIf="selectedHero">
